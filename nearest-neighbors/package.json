@@ -29,8 +29,8 @@
     "name": "Luiz Wendel"
   },
   "scripts": {
-    "dev": "",
-    "test": ""
+    "create": "node create_embedding.js",
+    "process": "node process_embeddings.js"
   },
   "dependencies": {
     "@huggingface/transformers": "^4.3.1"

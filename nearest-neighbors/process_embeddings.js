@@ -1,6 +1,7 @@
 import fs from "fs";
 
-const files = fs.readdirSync("./embeddings").map((file) => `./embeddings/${file}`);
+const files = fs.readdirSync("./embeddings")
+  .map((file) => `./embeddings/${file}`);
 
 let embeddings = [];
 

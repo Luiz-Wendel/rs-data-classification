@@ -149,5 +149,5 @@ vite.config.ts.timestamp-*
 .turbo
 
 # training images
-train/
-embeddings/
+nearest-neighbors/train/
+nearest-neighbors/embeddings/
