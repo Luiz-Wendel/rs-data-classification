@@ -22,7 +22,8 @@
   },
   "scripts": {
     "create": "node create_embedding.js",
-    "process": "node process_embeddings.js"
+    "process": "node process_embeddings.js",
+    "classify": "node classifier.js"
   },
   "dependencies": {
     "@huggingface/transformers": "^4.3.1"
