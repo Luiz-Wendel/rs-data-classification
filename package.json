@@ -1,0 +1,38 @@
+{
+  "name": "rs-nearest-neighbors",
+  "version": "1.0.0",
+  "description": "A simple nearest neighbors implementation in Node.js",
+  "main": "index.js",
+  "type": "module",
+  "license": "MIT",
+  "private": false,
+  "engines": {
+    "node": ">= 14.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "homepage": "https://github.com/luizwendel/rs-nearest-neighbors",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luizwendel/rs-nearest-neighbors.git"
+  },
+  "bugs": {
+    "url": "https://github.com/luizwendel/rs-nearest-neighbors/issues"
+  },
+  "keywords": [
+    "nearest-neighbors",
+    "knn",
+    "machine-learning",
+    "nodejs",
+    "algorithm"
+  ],
+  "author": {
+    "name": "Luiz Wendel"
+  },
+  "scripts": {
+    "dev": "",
+    "test": ""
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^4.3.1"
+  }
+}
