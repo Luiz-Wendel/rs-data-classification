@@ -1,0 +1,22 @@
+{
+  "name": "rs-tsne",
+  "version": "1.0.0",
+  "description": "T-SNE implementation in Node.js",
+  "main": "index.js",
+  "type": "module",
+  "license": "MIT",
+  "private": false,
+  "engines": {
+    "node": ">= 14.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Luiz Wendel"
+  },
+  "scripts": {},
+  "dependencies": {
+    "csv-writer": "^1.6.0",
+    "tsne-js": "^1.0.3"
+  }
+}

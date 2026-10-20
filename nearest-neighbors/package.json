@@ -10,14 +10,6 @@
     "node": ">= 14.0.0",
     "npm": ">= 6.0.0"
   },
-  "homepage": "https://github.com/luizwendel/rs-nearest-neighbors",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/luizwendel/rs-nearest-neighbors.git"
-  },
-  "bugs": {
-    "url": "https://github.com/luizwendel/rs-nearest-neighbors/issues"
-  },
   "keywords": [
     "nearest-neighbors",
     "knn",

@@ -148,6 +148,7 @@ vite.config.ts.timestamp-*
 # Turbo Repo
 .turbo
 
-# training images
+# output files
 nearest-neighbors/train/
 nearest-neighbors/embeddings/
+tsne/output/
