@@ -27,7 +27,13 @@ function compare(testEmbedding) {
 }
 
 function getKNearestNeighbors(distances, k) {
-  distances.sort((a, b) => a.distance - b.distance);
+  distances.sort((a,b) => {
+      if (a.distance > b.distance) {
+        return -1;
+      }  else {
+        return 1;
+      }
+    });
 
   return distances.slice(0, k);
 }
@@ -68,3 +74,28 @@ function knnClassifier(testEmbedding, k) {
 
   return predictedClass;
 }
+
+function getAccuracy(predictedClasses) {
+  let correctPredictions = 0;
+
+  for (let { predictedClass, actualClass } of predictedClasses) {
+    if (predictedClass === actualClass) {
+      correctPredictions++;
+    }
+  }
+
+  return (correctPredictions / predictedClasses.length) * 100;
+}
+
+const predictedClasses = [];
+
+for (let testEmbedding of testEmbeddings) {
+  const predictedClass = knnClassifier(testEmbedding, 5);
+
+  predictedClasses.push({
+    predictedClass,
+    actualClass: testEmbedding.class,
+  });
+}
+
+console.log(getAccuracy(predictedClasses));
