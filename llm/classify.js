@@ -1,7 +1,7 @@
 import fs from "fs";
 
 import dotenv from "dotenv";
-import { createPartFromUri, createUserContent, GoogleGenAI } from "@google/genai";
+import { createPartFromUri, createUserContent, GoogleGenAI, Type } from "@google/genai";
 
 dotenv.config();
 
@@ -32,15 +32,35 @@ async function generateContentFromImage(image) {
       model: "gemini-3.8-flash",
       contents: createUserContent([
         createPartFromUri(image.uri, image.mimeType),
-        "Faça uma descrição da imagem acima",
+        `
+          Identify if the image has one or more cat/dog.
+          If it has cat(s), return 'cat'.
+          If it has dog(s), return 'dog'.
+        `,
       ]),
+      config: {
+        responseMimeType: "application/json",
+        responseSchema: {
+          type: Type.ARRAY,
+          items: {
+            type: Type.OBJECT,
+            properties: {
+              category: {
+                type: Type.STRING,
+                enum: ["cat", "dog"],
+                description: "The category of the image, either 'cat' or 'dog'.",
+              },
+            },
+          },
+        }
+      }
     });
   
     console.log(response.text);
   } catch (error) {
     if (error.status === 503) {
-      console.log("Service unavailable. Retrying in 3 seconds...");
-      await new Promise(resolve => setTimeout(resolve, 3000));
+      console.log("Service unavailable. Retrying in 1s...");
+      await new Promise(resolve => setTimeout(resolve, 1000));
       await generateContentFromImage(image);
     }
   }
