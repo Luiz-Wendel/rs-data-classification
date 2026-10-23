@@ -17,6 +17,15 @@
   flex: 1;
 }
 
+.input-container .select {
+  background-color: var(--social-bg);
+  border: none;
+  border-radius: 0.25rem;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
 .input-container .button {
   background-color: var(--accent);
   border: none;
@@ -25,21 +34,4 @@
   cursor: pointer;
   font-weight: bold;
   padding: 0.5rem 1rem;
-}
-
-.image-container {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.image-container .image {
-  width: 90vw;
-}
-
-.image-container .caption {
-  font-size: 1.5rem;
-  font-weight: bold;
-  width: 90vw;
 }
