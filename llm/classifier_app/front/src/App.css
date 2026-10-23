@@ -1,0 +1,45 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.input-container {
+  display: flex;
+  gap: 0.5rem;
+  width: 90vw;
+}
+
+.input-container .input {
+  border: none;
+  border-radius: 0.25rem;
+  flex: 1;
+}
+
+.input-container .button {
+  background-color: var(--accent);
+  border: none;
+  border-radius: 0.25rem;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+}
+
+.image-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.image-container .image {
+  width: 90vw;
+}
+
+.image-container .caption {
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 90vw;
+}
