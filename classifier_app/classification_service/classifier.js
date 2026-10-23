@@ -1,8 +1,7 @@
-// import { init, knnClassify } from './knn/api.js'
+import { init, knnClassify } from './knn/api.js'
 
-// init();
-// console.log(await knnClassify("https://images.theconversation.com/files/625049/original/file-20241010-15-95v3ha.jpg?ixlib=rb-4.1.0&rect=12%2C96%2C2671%2C1335&q=45&auto=format&w=668&h=324&fit=crop", 5));
+const dogExample = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-rTdT2WX-YerT0ldO_FyTb_NKUhhniDuZrrD5FNJlHA&s=10"
+const catExample = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHixzeHkYmjfqDaUWSM5_GcbWspfBsVlpc8ekD7r0Lpg&s=10"
 
-import { classify } from './llm/api.js';
-
-console.log(await classify("https://images.theconversation.com/files/625049/original/file-20241010-15-95v3ha.jpg?ixlib=rb-4.1.0&rect=12%2C96%2C2671%2C1335&q=45&auto=format&w=668&h=324&fit=crop"));
+await init();
+console.log(await knnClassify(catExample, 5));
