@@ -7,9 +7,22 @@ function App() {
   const [imageSource, setImageSource] = React.useState(null)
   const [classificationResult, setClassificationResult] = React.useState(null)
 
-  function classify() {
+  async function classify() {
     setImageSource(textInput)
     setClassificationResult('Classifying...')
+
+    const response = await fetch('http://localhost:3000/classify', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        method: 'knn',
+        imagePath: textInput
+      })
+    })
+
+    console.log('Response:', await response.json());
   }
 
   return (
