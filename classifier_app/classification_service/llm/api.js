@@ -1,7 +1,7 @@
 import llmClassifier from './classifier.js';
 
-async function classify(path) {
+async function llmClassify(path) {
   return llmClassifier(path);
 }
 
-export { classify };
+export { llmClassify };
