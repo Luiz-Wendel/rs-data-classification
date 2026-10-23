@@ -1,0 +1,27 @@
+{
+  "name": "rs-classification-service",
+  "version": "1.0.0",
+  "description": "Backend service for the front app",
+  "main": "index.js",
+  "type": "module",
+  "license": "MIT",
+  "private": false,
+  "engines": {
+    "node": ">= 14.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "keywords": [
+    "nearest-neighbors",
+    "knn",
+    "machine-learning",
+    "nodejs",
+    "algorithm"
+  ],
+  "author": {
+    "name": "Luiz Wendel"
+  },
+  "scripts": {},
+  "dependencies": {
+    "@huggingface/transformers": "^4.3.1"
+  }
+}
